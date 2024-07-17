@@ -667,32 +667,3 @@ p {
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
 }
-
-.checkbox-field-wrap {
-  display: flex;
-}
-.checkbox-field {
-  width: 16px;
-  height: 16px;
-  border-radius: 2px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  margin-top: 16px;
-}
-
-.lab-for-checkbox {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16667;
-  letter-spacing: 0.04em;
-  color: #8e8f99;
-  margin-left: 8px;
-  margin-top: 16px;
-}
-
-.privecy-policy-link {
-  line-height: 1.33333;
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
-  color: #4d5ae5;
-}

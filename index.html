@@ -62,7 +62,9 @@
       <section class="section-one">
         <div class="container">
           <h1 class="h-one">Effective Solutions for Your Business</h1>
-          <button class="service-button" type="button">Order Service</button>
+          <button class="service-button" type="button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
       <section class="our-studio-section">
@@ -488,10 +490,10 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop is-open">
+    <div class="backdrop is-ope" data-modal>
       <div class="modal">
         <form action="">
-          <button type="button" class="btn-for-close-svg">
+          <button type="button" class="btn-for-close-svg" data-modal-close>
             <svg class="close-svg-icon" width="8" height="8">
               <use href="./images/icons.svg#icon-close-black-18dp-2-1-1"></use>
             </svg>
@@ -548,9 +550,29 @@
                 placeholder="Text input"
               ></textarea>
             </div>
+            <div class="check-field">
+              <input
+                class="modal-check visually-hidden"
+                type="checkbox"
+                name="terms"
+                id="terms"
+                value="true"
+                checked
+              />
+              <label for="terms" class="modal-check-text"
+                ><span class="fake-checkbox">
+                  <svg class="" width="10" height="8">
+                    <use href="./images/icons.svg#icon-Vector"></use>
+                  </svg> </span
+                >I accept the terms and conditions of the
+                <span class="spn-text">Privacy Policy</span></label
+              >
+            </div>
+            <button class="backdrop-btn" type="submit">Send</button>
           </div>
         </form>
       </div>
     </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

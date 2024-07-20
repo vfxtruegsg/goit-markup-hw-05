@@ -765,9 +765,6 @@ p {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
-  display: flex;
-  text-align: center;
-  gap: 8px;
 }
 
 .fake-checkbox {
@@ -782,6 +779,7 @@ p {
   align-items: center;
   justify-content: center;
   fill: transparent;
+  margin-right: 8px;
 }
 
 .modal-check:checked + .modal-check-text .fake-checkbox {

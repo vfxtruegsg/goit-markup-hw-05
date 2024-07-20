@@ -783,7 +783,7 @@ p {
   margin-right: 8px;
 }
 
-.modal-check:checked + .modal-check-text span {
+.modal-check:checked + .modal-check-text .fake-checkbox {
   background-color: #404bbf;
   fill: #f4f4fd;
   border: none;

@@ -730,6 +730,7 @@ p {
 
 .txt-area-field-wrap {
   position: relative;
+  height: 138px;
   margin-bottom: 16px;
 }
 
@@ -782,7 +783,7 @@ p {
   margin-right: 8px;
 }
 
-.modal-check:checked + .modal-check-text .fake-checkbox {
+.modal-check:checked + .modal-check-text span {
   background-color: #404bbf;
   fill: #f4f4fd;
   border: none;

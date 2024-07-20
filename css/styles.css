@@ -622,16 +622,14 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.close-svg-icon {
-  fill: #2e2f42;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 72px 24px 24px 24px;
 }
 
 .btn-for-close-svg {
   width: 24px;
   height: 24px;
-  border-radius: 100%;
+  border-radius: 50%;
   background-color: #e7e9fc;
   stroke: rgba(0, 0, 0, 0.1);
   stroke-width: 1px;
@@ -639,39 +637,49 @@ p {
   position: absolute;
   top: 24px;
   right: 24px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn-for-close-svg:hover,
+.btn-for-close-svg:focus {
+  background-color: #404bbf;
   border: none;
 }
 
-.btn-for-close-svg:hover {
-  background-color: #404bbf;
+.close-svg-icon {
+  fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn-for-close-svg:hover .close-svg-icon {
-  fill: #fff;
+.btn-for-close-svg:hover .close-svg-icon,
+.btn-for-close-svg:focus .close-svg-icon {
+  fill: #ffffff;
 }
 
 .modal-text {
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
-  margin-top: 72px;
   margin-bottom: 16px;
 }
 
 .modal-fields {
   display: flex;
   flex-direction: column;
-  margin-left: 24px;
-  margin-right: 24px;
+  margin-bottom: 8px;
 }
 
 .mod-fld-lb {
-  font-family: "Roboto", sans-serif;
+  display: block;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16667;
@@ -681,13 +689,14 @@ p {
 }
 
 .input-field {
+  width: 100%;
+  height: 40px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  width: 360px;
-  height: 40px;
   padding-left: 38px;
   outline: transparent;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -699,7 +708,7 @@ p {
 .input-field:focus,
 .textarea-field:active,
 .textarea-field:focus {
-  border: 1px solid #4d5ae5;
+  border-color: #4d5ae5;
 }
 
 .input-field:active + .field-svg,
@@ -709,7 +718,6 @@ p {
 
 .modal-field-wrap {
   position: relative;
-  margin-bottom: 8px;
 }
 
 .field-svg {
@@ -728,29 +736,33 @@ p {
 .textarea-field {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  width: 360px;
+  width: 100%;
   height: 120px;
   resize: none;
   padding: 8px 16px;
   outline: transparent;
-  margin-top: 4px;
+  background-color: transparent;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
 }
 
 .textarea-field::placeholder {
   color: rgba(46, 47, 66, 0.4);
 }
 
+.check-field {
+  margin-bottom: 24px;
+}
+
 .modal-check-text {
-  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
   display: flex;
@@ -763,12 +775,21 @@ p {
   height: 16px;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
 }
 
 .modal-check:checked + .modal-check-text .fake-checkbox {
   border-radius: 2px;
   background-color: #404bbf;
   border: 1px solid #404bbf;
+  fill: #f4f4fd;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -782,9 +803,10 @@ p {
 }
 
 .backdrop-btn {
+  display: block;
   border-radius: 4px;
   padding: 16px 32px;
-  width: 169px;
+  min-width: 169px;
   height: 56px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: #4d5ae5;
@@ -796,7 +818,8 @@ p {
   letter-spacing: 0.04em;
   text-align: center;
   color: #fff;
-  margin: 24px auto;
+  cursor: pointer;
+  margin: 24px auto 0 auto;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 

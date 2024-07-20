@@ -474,12 +474,13 @@
         <div class="footer-three-section">
           <p class="soc-media-h">Subscribe</p>
           <form action="" class="footer-sec">
-            <label class="lab-for-ft-field" for="#footer-field">
+            <label class="lab-for-ft-field" for="footer-field">
               <input
                 class="footer-field"
                 type="email"
                 placeholder="E-mail"
                 id="footer-field"
+                name="field-for-email"
               />
             </label>
             <button class="ftr-sub-btn" type="submit">
@@ -494,30 +495,30 @@
     </footer>
     <div class="backdrop is-ope" data-modal>
       <div class="modal">
+        <button type="button" class="btn-for-close-svg" data-modal-close>
+          <svg class="close-svg-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close-black-18dp-2-1-1"></use>
+          </svg>
+        </button>
+        <p class="modal-text">Leave your contacts and we will call you back</p>
         <form action="">
-          <button type="button" class="btn-for-close-svg" data-modal-close>
-            <svg class="close-svg-icon" width="8" height="8">
-              <use href="./images/icons.svg#icon-close-black-18dp-2-1-1"></use>
-            </svg>
-          </button>
-          <p class="modal-text">
-            Leave your contacts and we will call you back
-          </p>
           <div class="modal-fields">
-            <label for="#username" class="mod-fld-lb">Name</label>
+            <label for="user-name" class="mod-fld-lb">Name</label>
             <div class="modal-field-wrap">
               <input
                 class="input-field"
                 type="text"
-                name="username"
-                id="username"
+                name="user-name"
+                id="user-name"
                 required
               />
               <svg class="field-svg" width="18" height="24">
                 <use href="./images/icons.svg#icon-person-black-18dp-1-1"></use>
               </svg>
             </div>
-            <label for="#tel-number" class="mod-fld-lb">Phone</label>
+          </div>
+          <div class="modal-fields">
+            <label for="tel-number" class="mod-fld-lb">Phone</label>
             <div class="modal-field-wrap">
               <input
                 class="input-field"
@@ -530,7 +531,9 @@
                 <use href="./images/icons.svg#icon-phone-black-18dp-1-1"></use>
               </svg>
             </div>
-            <label for="#useremail" class="mod-fld-lb">Email</label>
+          </div>
+          <div class="modal-fields">
+            <label for="useremail" class="mod-fld-lb">Email</label>
             <div class="modal-field-wrap">
               <input
                 class="input-field"
@@ -543,35 +546,35 @@
                 <use href="./images/icons.svg#icon-email-black-18dp-1-1"></use>
               </svg>
             </div>
-            <div class="txt-area-field-wrap">
-              <label for="#txta-field" class="mod-fld-lb">Comment</label>
-              <textarea
-                class="textarea-field"
-                name="txta-field"
-                id="txta-field"
-                placeholder="Text input"
-              ></textarea>
-            </div>
-            <div class="check-field">
-              <input
-                class="modal-check visually-hidden"
-                type="checkbox"
-                name="terms"
-                id="terms"
-                value="true"
-                checked
-              />
-              <label for="terms" class="modal-check-text"
-                ><span class="fake-checkbox">
-                  <svg class="" width="10" height="8">
-                    <use href="./images/icons.svg#icon-Vector"></use>
-                  </svg> </span
-                >I accept the terms and conditions of the
-                <span class="spn-text">Privacy Policy</span></label
-              >
-            </div>
-            <button class="backdrop-btn" type="submit">Send</button>
           </div>
+          <div class="txt-area-field-wrap">
+            <label for="user-comment" class="mod-fld-lb">Comment</label>
+            <textarea
+              class="textarea-field"
+              name="user-comment"
+              id="user-comment"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+          <div class="check-field">
+            <input
+              class="modal-check visually-hidden"
+              type="checkbox"
+              name="user-privacy"
+              id="user-privacy"
+              value="true"
+              checked
+            />
+            <label for="user-privacy" class="modal-check-text"
+              ><span class="fake-checkbox">
+                <svg class="svg-vector-checkbox" width="10" height="8">
+                  <use href="./images/icons.svg#icon-Vector"></use>
+                </svg> </span
+              >I accept the terms and conditions of the
+              <a class="spn-text" href="./index.html">Privacy Policy</a></label
+            >
+          </div>
+          <button class="backdrop-btn" type="submit">Send</button>
         </form>
       </div>
     </div>

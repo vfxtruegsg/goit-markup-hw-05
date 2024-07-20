@@ -635,11 +635,11 @@ p {
   stroke-width: 1px;
   padding: 0px;
   position: absolute;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   top: 24px;
   right: 24px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -682,7 +682,7 @@ p {
   display: block;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
   margin-bottom: 4px;
@@ -742,7 +742,7 @@ p {
   padding: 8px 16px;
   outline: transparent;
   background-color: transparent;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -773,8 +773,8 @@ p {
 .fake-checkbox {
   width: 16px;
   height: 16px;
-  border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -785,14 +785,9 @@ p {
 }
 
 .modal-check:checked + .modal-check-text .fake-checkbox {
-  border-radius: 2px;
   background-color: #404bbf;
-  border: 1px solid #404bbf;
   fill: #f4f4fd;
   border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .spn-text {
